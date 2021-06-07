@@ -47,12 +47,12 @@
         scene.add(box);
 
         //角すい〜円すい
-var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
-//半径、高さ、底面の分割数
-var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
-var cone = new THREE.Mesh( coneGeometry, coneMaterial );
-cone.position.set( 0, 0, -5 );
-scene.add( cone );
+        var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
+        //半径、高さ、底面の分割数
+        var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
+        var cone = new THREE.Mesh(geometry, material );
+        cone.position.set( 0, 0, -5 );
+        scene.add( cone );
         
         tick();
 
