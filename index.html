@@ -46,12 +46,6 @@
         var box = new THREE.Mesh(geometry, material);
         scene.add(box);
 
-        //角すい〜円すい
-        var Cgeometry = new THREE.Cgeometry( 0.5, 1, 5 ); 
-        //半径、高さ、底面の分割数
-        var Cmaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
-        var cone = new THREE.Mesh(Cgeometry, Cmaterial );
-        scene.add( cone );
         
         tick();
 
