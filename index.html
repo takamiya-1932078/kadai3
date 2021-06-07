@@ -41,11 +41,19 @@
         scene.add(directionalLight2);
 
         // 箱を作成(原点に作成)
-        var geometry = new THREE.BoxGeometry(300, 300, 300);
-        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var geometry = new THREE.BoxGeometry(100, 200, 300);
+        var material = new THREE.MeshPhongMaterial({ color: 0x1234ff });
         var box = new THREE.Mesh(geometry, material);
         scene.add(box);
 
+        //角すい〜円すい
+var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
+//半径、高さ、底面の分割数
+var coneMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff} );
+var cone = new THREE.Mesh( coneGeometry, coneMaterial );
+cone.position.set( 0, 0, -5 );
+scene.add( cone );
+        
         tick();
 
         // 毎フレーム時に実行されるループイベントです
