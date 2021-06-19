@@ -49,6 +49,12 @@
       const axisHelper = new THREE.AxisHelper(200,50);
       scene.add(axisHelper);
 
+        // 箱を作成(原点に作成)
+        var geometry = new THREE.BoxGeometry(100, 200, 300);
+        var material = new THREE.MeshPhongMaterial({ color: 0x1234ff });
+        var box = new THREE.Mesh(geometry, material);
+        scene.add(box);
+        
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture0 = textureLoader.load("—Pngtree—mountains and steep mountains_4407478.png");
