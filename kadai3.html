@@ -116,19 +116,24 @@
         scene.add(box1);
         
         // 箱を作成
-        var geometry2 = new THREE.BoxGeometry(30, 50, 50);
+        var geometry2 = new THREE.BoxGeometry(10, 50, 50);
         var box2 = new THREE.Mesh(geometry2, mat1);
+        box2.position.x = 30;
         box2.position.y = 25;
+        box2.position.z = -22.5;
         scene.add(box2);
         
         // 箱を作成
         var box3 = new THREE.Mesh(geometry1, mat1);
-        box3.position.y = 25;
+        box2.position.y = 25;
+        box2.position.z = -60;
         scene.add(box3);
         
         // 箱を作成
         var box4 = new THREE.Mesh(geometry2, mat1);
-        box4.position.y = 25;
+        box2.position.x = -30;
+        box2.position.y = 25;
+        box2.position.z = -22.5;
         scene.add(box4);
         
         // ドアを作成
