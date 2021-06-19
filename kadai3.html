@@ -53,6 +53,7 @@
         var geometry = new THREE.BoxGeometry(10, 20, 30);
         var material = new THREE.MeshPhongMaterial({ color: 0x1234ff });
         var box = new THREE.Mesh(geometry, material);
+        box.position.y = 50;
         scene.add(box);
         
         // 木0をスプライトで作成
