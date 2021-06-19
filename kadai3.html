@@ -107,6 +107,10 @@
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = texture5;
         
+        var texture6 = textureLoader.load("suisya1.jpg");
+        var mat4 = new THREE.MeshPhongMaterial();
+        mat4.map = texture6;
+        
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
         mat1.bumpMap = bump;
@@ -178,7 +182,12 @@
         cone.position.set(0,70,-30)
         cone.rotation.y = 0.75
         scene.add(cone);
-
+        
+        // 円柱を作成
+        var cylinderGeometry = new THREE.CylinderGeometry( 20, 20, 10);
+        var suisya = new THREE.Mesh(cylinderGeometry, mat4);
+        suisya.position.set(40,22,-30)
+        scene.add(suisya);
         
         tick();
         // 毎フレーム時に実行されるループイベントです
