@@ -31,7 +31,7 @@
         // 床を作成
         var meshFloor = new THREE.Mesh(
           new THREE.BoxGeometry(2000, 0.1, 2000),
-          new THREE.MeshStandardMaterial({ color: FFC0FF00, roughness: 1.0 })
+          new THREE.MeshStandardMaterial({ color: 98FB98, roughness: 1.0 })
         );
         scene.add(meshFloor)
 
@@ -202,7 +202,7 @@
         
         //　川を作成
         var kawageo = new THREE.BoxGeometry(30, 3, 200);
-        var kawamat = new THREE.MeshPhongMaterial( {color: FF00C0FF} );
+        var kawamat = new THREE.MeshPhongMaterial( {color: 0x1234ff} );
         var kawa = new THREE.Mesh( kawageo, kawamat);
         kawa.position.x = 50;
         kawa.position.z = -75
