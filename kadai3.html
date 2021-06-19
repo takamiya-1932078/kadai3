@@ -114,9 +114,11 @@
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = texture5;
         
-        var texture6 = textureLoader.load("suisya1.png");
-        var mat4 = new THREE.MeshPhongMaterial();
-        mat4.map = texture6;
+        var materials = [
+     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("ki.jpg")}),
+     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("suisya1.png")}),
+  ];
+        
         
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
@@ -192,7 +194,7 @@
         
         // 円柱を作成
         var cylinderGeometry = new THREE.CylinderGeometry( 20, 20, 10,32);
-        var suisya = new THREE.Mesh(cylinderGeometry, mat4);
+        var suisya = new THREE.Mesh(cylinderGeometry, materials);
         suisya.position.set(40,22,-30)
         suisya.rotation.x = 1
         suisya.rotation.z = 1.5
