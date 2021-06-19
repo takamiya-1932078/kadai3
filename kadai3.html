@@ -120,10 +120,20 @@
         var box2 = new THREE.Mesh(geometry2, mat1);
         box2.position.x = 30;
         box2.position.y = 25;
-        box2.position.z = -22.5;
+        box2.position.z = -27.5;
         scene.add(box2);
         
+        // 箱を作成
+        var box3 = new THREE.Mesh(geometry1, mat1);
+        box2.position.z = -120;
+        scene.add(box3);
         
+        // 箱を作成
+        var box4 = new THREE.Mesh(geometry2, mat1);
+        box2.position.x = -30;
+        box2.position.y = 25;
+        box2.position.z = -22.5;
+        scene.add(box4);
         
         // ドアを作成
         var geometry5 = new THREE.BoxGeometry(15, 30, 5);
