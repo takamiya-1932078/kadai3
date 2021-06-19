@@ -99,10 +99,13 @@
         var mat1 = new THREE.MeshPhongMaterial();
         mat1.map = texture3;
         
-        // テクスチャー読み込み
         var texture4 = textureLoader.load("mon.jpg");
         var mat2 = new THREE.MeshPhongMaterial();
         mat2.map = texture4;
+        
+        var texture5 = textureLoader.load("renga.jpg");
+        var mat3 = new THREE.MeshPhongMaterial();
+        mat3.map = texture5;
         
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
@@ -142,24 +145,24 @@
         
         //　柱を作成
         var geometryA = new THREE.BoxGeometry(10, 50, 10);
-        var boxA = new THREE.Mesh(geometryA, mat1);
+        var boxA = new THREE.Mesh(geometryA, mat3);
         boxA.position.x = 30;
         boxA.position.y = 25;
         scene.add(boxA);
         
-        var boxB = new THREE.Mesh(geometryA, mat1);
+        var boxB = new THREE.Mesh(geometryA, mat3);
         boxB.position.x = 30;
         boxB.position.y = 25;
         boxB.position.z = -60;
         scene.add(boxB);
         
-        var boxC = new THREE.Mesh(geometryA, mat1);
+        var boxC = new THREE.Mesh(geometryA, mat3);
         boxC.position.x = -30;
         boxC.position.y = 25;
         boxC.position.z = -60;
         scene.add(boxC);
         
-        var boxD = new THREE.Mesh(geometryA, mat1);
+        var boxD = new THREE.Mesh(geometryA, mat3);
         boxD.position.x = -30;
         boxD.position.y = 25;
         scene.add(boxD);
