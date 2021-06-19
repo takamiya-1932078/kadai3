@@ -98,18 +98,18 @@
         const material2 = new THREE.SpriteMaterial({ map: texture2,});
         
         const sprite3 = new THREE.Sprite(material2);
-        sprite3.position.x = -100;
-        sprite3.position.y = 50;
-        sprite3.position.z = -200;
-        sprite3.scale.set(100,100,100);
+        sprite3.position.x = -80;
+        sprite3.position.y = 20;
+        sprite3.position.z = 40;
+        sprite3.scale.set(40,40,40);
         scene.add(sprite3);
         
         const sprite4 = new THREE.Sprite(material2);
-        sprite4.position.x = -100;
-        sprite4.position.y = 50;
-        sprite4.position.z = -200;
-        sprite4.scale.set(100,100,100);
-        scene.add(sprite3);
+        sprite4.position.x = 80;
+        sprite4.position.y = 20;
+        sprite4.position.z = 40;
+        sprite4.scale.set(40,40,40);
+        scene.add(sprite4);
 
         // テクスチャー読み込み
         var texture3 = textureLoader.load("stone_00117.jpg");
