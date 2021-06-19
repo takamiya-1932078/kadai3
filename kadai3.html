@@ -142,8 +142,8 @@
         scene.add(box4);
         
         // ドアを作成
-        var geometry5 = new THREE.BoxGeometry(15, 30, 5);
-        var door = new THREE.Mesh(geometry5, mat2);
+        var geometry3 = new THREE.BoxGeometry(15, 30, 5);
+        var door = new THREE.Mesh(geometry3, mat2);
         door.position.y = 15;
         door.position.z = 7.5;
         scene.add(door);
@@ -171,6 +171,13 @@
         boxD.position.x = -30;
         boxD.position.y = 25;
         scene.add(boxD);
+        
+        //　屋根を作成
+        var coneGeometry = new THREE.ConeGeometry( 0.5, 1, 5 ); 
+        var cone = new THREE.Mesh(coneGeometry, mat3);
+        cone.position.set(0,70,-30)
+        scene.add(cone);
+
         
         tick();
         // 毎フレーム時に実行されるループイベントです
