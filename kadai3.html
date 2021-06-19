@@ -48,13 +48,8 @@
 
       const axisHelper = new THREE.AxisHelper(200,50);
       scene.add(axisHelper);
-
-        // 箱を作成(原点に作成)
-        var geometry = new THREE.BoxGeometry(50, 50, 30);
-        var material = new THREE.MeshPhongMaterial({ color: 0x1234ff });
-        var box = new THREE.Mesh(geometry, material);
-        box.position.y = 25;
-        scene.add(box);
+        
+     
         
         // 木0をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
@@ -90,6 +85,23 @@
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
 
+        // テクスチャー読み込み
+        var texture3 = textureLoader.load("stone_00117.jpg");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
+        
+        // バンプマップ読み込み
+        var bump = textureLoader.load("stone_bump.jpg");
+        mat.bumpMap = bump;
+        mat.bumpscale = 0.2;
+
+
+        // 箱を作成(原点に作成)
+        var geometry = new THREE.BoxGeometry(50, 50, 30);
+        var box = new THREE.Mesh(geometry, mat);
+        box.position.y = 25;
+        scene.add(box);
+        
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
