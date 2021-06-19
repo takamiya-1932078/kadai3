@@ -197,14 +197,15 @@
         var suisya = new THREE.Mesh(cylinderGeometry, materials);
         suisya.position.set(40,22,-30)
         suisya.rotation.x = 1
-        suisya.rotation.z = 1.5
+        suisya.rotation.z = 4.5
         scene.add(suisya);
         
         //　川を作成
         var kawageo = new THREE.BoxGeometry(30, 3, 200);
         var kawamat = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
         var kawa = new THREE.Mesh( kawageo, kawamat);
-        kawa.position.x = 60;
+        kawa.position.x = 50;
+        kawa.position.z = -50
         scene.add(kawa);
         
         tick();
