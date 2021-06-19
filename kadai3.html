@@ -31,7 +31,7 @@
         // 床を作成
         var meshFloor = new THREE.Mesh(
           new THREE.BoxGeometry(2000, 0.1, 2000),
-          new THREE.MeshStandardMaterial({ color: 0x4561FF, roughness: 1.0 })
+          new THREE.MeshStandardMaterial({ color: 0x7777FF, roughness: 1.0 })
         );
         scene.add(meshFloor)
 
@@ -196,7 +196,6 @@
         var cylinderGeometry = new THREE.CylinderGeometry( 20, 20, 10,32);
         var suisya = new THREE.Mesh(cylinderGeometry, materials);
         suisya.position.set(40,22,-30)
-        suisya.rotation.x = 1
         suisya.rotation.z = 4.5
         scene.add(suisya);
         
