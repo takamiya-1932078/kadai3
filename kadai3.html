@@ -67,21 +67,17 @@
         
      
         
-        // 岩0をスプライトで作成
+        // 岩をスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
-        var texture0 = textureLoader.load("—Pngtree—mountains and steep mountains_4407478.png");
-        const material0 = new THREE.SpriteMaterial({ map: texture0,});
+        var texture1 = textureLoader.load("—Pngtree—mountains and steep mountains_4407478.png");
+        const material1= new THREE.SpriteMaterial({ map: texture1,});
 
-        const sprite0 = new THREE.Sprite(material0);
+        const sprite0 = new THREE.Sprite(material1);
         sprite0.position.x = 0;
         sprite0.position.y = 75;
         sprite0.position.z = -180;
         sprite0.scale.set(150,150,150);
         scene.add(sprite0);
-
-        // 岩1をスプライトで作成 
-        var texture1 = textureLoader.load("—Pngtree—mountains and steep mountains_4407478.png");
-        const material1 = new THREE.SpriteMaterial({ map: texture1,});
 
         const sprite1 = new THREE.Sprite(material1);
         sprite1.position.x = 100;
@@ -90,16 +86,30 @@
         sprite1.scale.set(100,100,100);
         scene.add(sprite1);
 
-        // 岩1をスプライトで作成 
-        var texture2 = textureLoader.load("—Pngtree—mountains and steep mountains_4407478.png");
-        const material2 = new THREE.SpriteMaterial({ map: texture2,});
-
-        const sprite2 = new THREE.Sprite(material2);
+        const sprite2 = new THREE.Sprite(material1);
         sprite2.position.x = -100;
         sprite2.position.y = 50;
         sprite2.position.z = -200;
         sprite2.scale.set(100,100,100);
         scene.add(sprite2);
+        
+        // 木をスプライトで作成 
+        var texture2 = textureLoader.load("tree0.png");
+        const material2 = new THREE.SpriteMaterial({ map: texture2,});
+        
+        const sprite3 = new THREE.Sprite(material2);
+        sprite3.position.x = -100;
+        sprite3.position.y = 50;
+        sprite3.position.z = -200;
+        sprite3.scale.set(100,100,100);
+        scene.add(sprite3);
+        
+        const sprite4 = new THREE.Sprite(material2);
+        sprite4.position.x = -100;
+        sprite4.position.y = 50;
+        sprite4.position.z = -200;
+        sprite4.scale.set(100,100,100);
+        scene.add(sprite3);
 
         // テクスチャー読み込み
         var texture3 = textureLoader.load("stone_00117.jpg");
@@ -196,8 +206,8 @@
         var cylinderGeometry = new THREE.CylinderGeometry( 20, 20, 10,32);
         var suisya = new THREE.Mesh(cylinderGeometry, materials);
         suisya.position.set(40,22,-30)
-        suisya.rotation.x = 1.25
-        suisya.rotation.z = 4.25
+        suisya.rotation.x = 2
+        suisya.rotation.z = 4
         scene.add(suisya);
         
         //　川を作成
