@@ -173,9 +173,10 @@
         scene.add(boxD);
         
         //　屋根を作成
-        var coneGeometry = new THREE.ConeGeometry( 40, 40, 4 ); 
+        var coneGeometry = new THREE.ConeGeometry( 60, 40, 4 ); 
         var cone = new THREE.Mesh(coneGeometry, mat3);
         cone.position.set(0,70,-30)
+        cone.rotation.z = 0.5
         scene.add(cone);
 
         
