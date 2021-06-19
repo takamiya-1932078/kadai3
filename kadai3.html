@@ -1,4 +1,4 @@
-<html lang="ja">
+<html>
   <head>
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
@@ -86,11 +86,9 @@
         scene.add(sprite2);
 
         // テクスチャー読み込み
-        var texture3 = textureLoader.load("stone_00117.jpg");
-        const mat = new THREE.MeshPhongMaterial();
+        var texture = textureLoader.load("stone_00117.jpg");
+        var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
-        
-       
 
         // 箱を作成(原点に作成)
         var geometry = new THREE.BoxGeometry(50, 50, 30);
