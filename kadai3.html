@@ -110,17 +110,33 @@
         mat1.bumpscale = 0.2;
 
         // 箱を作成
-        var geometry1 = new THREE.BoxGeometry(50, 50, 30);
+        var geometry1 = new THREE.BoxGeometry(50, 50, 10);
         var box1 = new THREE.Mesh(geometry1, mat1);
         box1.position.y = 25;
         scene.add(box1);
         
         // 箱を作成
-        var geometry2 = new THREE.BoxGeometry(15, 30, 5);
-        var box2 = new THREE.Mesh(geometry2, mat2);
-        box2.position.y = 15;
-        box2.position.z = 17.5;
+        var geometry2 = new THREE.BoxGeometry(30, 50, 50);
+        var box2 = new THREE.Mesh(geometry2, mat1);
+        box2.position.y = 25;
         scene.add(box2);
+        
+        // 箱を作成
+        var box3 = new THREE.Mesh(geometry1, mat1);
+        box3.position.y = 25;
+        scene.add(box3);
+        
+        // 箱を作成
+        var box4 = new THREE.Mesh(geometry2, mat1);
+        box4.position.y = 25;
+        scene.add(box4);
+        
+        // ドアを作成
+        var geometry5 = new THREE.BoxGeometry(15, 30, 5);
+        var door = new THREE.Mesh(geometry5, mat2);
+        door.position.y = 15;
+        door.position.z = 7.5;
+        scene.add(door);
         
         tick();
         // 毎フレーム時に実行されるループイベントです
