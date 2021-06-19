@@ -111,6 +111,11 @@
         var bump = textureLoader.load("stone_bump.jpg");
         mat1.bumpMap = bump;
         mat1.bumpscale = 0.2;
+        
+        // バンプマップ読み込み
+        var bump = textureLoader.load("renga_bump.jpg");
+        mat3.bumpMap = bump;
+        mat3.bumpscale = 0.2;
 
         // 壁を作成
         var geometry1 = new THREE.BoxGeometry(50, 50, 10);
