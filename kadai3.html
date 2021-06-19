@@ -114,11 +114,10 @@
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = texture5;
         
-        var materials = [
-     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("ki.jpg")}),
+         var materials = [
      new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("suisya1.png")}),
+     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("ki.jpg")}),
   ];
-        
         
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
