@@ -95,29 +95,29 @@
         scene.add(sprite2);
 
         // テクスチャー読み込み
-        var texture = textureLoader.load("stone_00117.jpg");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
+        var texture3 = textureLoader.load("stone_00117.jpg");
+        var mat1 = new THREE.MeshPhongMaterial();
+        mat1.map = texture3;
         
         // テクスチャー読み込み
-        var texture = textureLoader.load("mon.jpg");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
+        var texture4 = textureLoader.load("mon.jpg");
+        var mat2 = new THREE.MeshPhongMaterial();
+        mat2.map = texture4;
         
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
-        mat.bumpMap = bump;
-        mat.bumpscale = 0.2;
+        mat1.bumpMap = bump;
+        mat1.bumpscale = 0.2;
 
         // 箱を作成
-        var geometry = new THREE.BoxGeometry(50, 50, 30);
-        var box = new THREE.Mesh(geometry, mat);
+        var geometry1 = new THREE.BoxGeometry(50, 50, 30);
+        var box = new THREE.Mesh(geometry1, mat1);
         box.position.y = 25;
         scene.add(box);
         
         // 箱を作成
-        var geometry = new THREE.BoxGeometry(15, 30, 5);
-        var box2 = new THREE.Mesh(geometry, mat2);
+        var geometry2 = new THREE.BoxGeometry(15, 30, 5);
+        var box2 = new THREE.Mesh(geometry2, mat2);
         box.position.y = 25;
         scene.add(box2);
         
