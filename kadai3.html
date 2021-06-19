@@ -27,6 +27,13 @@
         const camera = new THREE.PerspectiveCamera(45, width / height);
         // カメラの初期座標を設定
         camera.position.set(0, 0, 1000);
+        
+        // 床を作成
+        var meshFloor = new THREE.Mesh(
+          new THREE.BoxGeometry(2000, 0.1, 2000),
+          new THREE.MeshStandardMaterial({ color: 0x808080, roughness: 1.0 })
+        );
+        scene.add(meshFloor)
 
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
@@ -187,7 +194,8 @@
         var cylinderGeometry = new THREE.CylinderGeometry( 20, 20, 10,32);
         var suisya = new THREE.Mesh(cylinderGeometry, mat4);
         suisya.position.set(40,22,-30)
-        suisya.rotation.z = 5.5
+        suisya.rotation.x = 1.5
+        suisya.rotation.z = 1.5
         scene.add(suisya);
         
         tick();
