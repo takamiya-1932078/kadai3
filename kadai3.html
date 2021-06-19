@@ -115,8 +115,9 @@
         mat3.map = texture5;
         
          var materials = [
-     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("suisya1.png")}),
      new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("ki.jpg")}),
+     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("suisya1.png")}),
+     new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("suisya1.png")}),
   ];
         
         // バンプマップ読み込み
@@ -200,10 +201,10 @@
         scene.add(suisya);
         
         //　川を作成
-        var kawageo = new THREE.BoxGeometry(30, 0, 100);
+        var kawageo = new THREE.BoxGeometry(30, 3, 200);
         var kawamat = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
         var kawa = new THREE.Mesh( kawageo, kawamat);
-        kawa.position.x = 75;
+        kawa.position.x = 60;
         scene.add(kawa);
         
         tick();
