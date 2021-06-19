@@ -99,16 +99,27 @@
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
         
+        // テクスチャー読み込み
+        var texture = textureLoader.load("mon.jpg");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
+        
         // バンプマップ読み込み
         var bump = textureLoader.load("stone_bump.jpg");
         mat.bumpMap = bump;
         mat.bumpscale = 0.2;
 
-        // 箱を作成(原点に作成)
+        // 箱を作成
         var geometry = new THREE.BoxGeometry(50, 50, 30);
         var box = new THREE.Mesh(geometry, mat);
         box.position.y = 25;
         scene.add(box);
+        
+        // 箱を作成
+        var geometry = new THREE.BoxGeometry(15, 30, 5);
+        var box2 = new THREE.Mesh(geometry, mat2);
+        box.position.y = 25;
+        scene.add(box2);
         
         tick();
         // 毎フレーム時に実行されるループイベントです
