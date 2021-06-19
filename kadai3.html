@@ -199,6 +199,13 @@
         suisya.rotation.z = 1.5
         scene.add(suisya);
         
+        //　川を作成
+        var kawageo = new THREE.BoxGeometry(30, 0, 100);
+        var kawamat = new THREE.MeshPhongMaterial( {color: 0x0000ff} );
+        var kawa = new THREE.Mesh( kawageo, kawamat);
+        kawa.position.x = 75;
+        scene.add(kawa);
+        
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
