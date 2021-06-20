@@ -221,6 +221,7 @@
         tick();
         // 毎フレーム時に実行されるループイベントです
         function tick() {
+          suisya.rotation.x += 0.01;
           // レンダリング
           renderer.render(scene, camera);
           requestAnimationFrame(tick);
